@@ -49,13 +49,13 @@ const Row3 = () => {
       field: "expense",
       headerName: "Expense",
       flex: 0.5,
-      renderCell: (params: GridCellParams) => `$${params.value}`,
+      renderCell: (params: GridCellParams) => `₹${params.value}`,
     },
     {
       field: "price",
       headerName: "Price",
       flex: 0.5,
-      renderCell: (params: GridCellParams) => `$${params.value}`,
+      renderCell: (params: GridCellParams) => `₹${params.value}`,
     },
   ];
 
@@ -74,7 +74,7 @@ const Row3 = () => {
       field: "amount",
       headerName: "Amount",
       flex: 0.35,
-      renderCell: (params: GridCellParams) => `$${params.value}`,
+      renderCell: (params: GridCellParams) => `₹${params.value}`,
     },
     {
       field: "productIds",
@@ -95,7 +95,7 @@ const Row3 = () => {
         <Box
           mt="0.5rem"
           p="0 0.5rem"
-          height="75%"
+          height="70%"
           sx={{
             "& .MuiDataGrid-root": {
               color: palette.grey[300],
@@ -130,7 +130,7 @@ const Row3 = () => {
         <Box
           mt="1rem"
           p="0 0.5rem"
-          height="80%"
+          height="70%"
           sx={{
             "& .MuiDataGrid-root": {
               color: palette.grey[300],
