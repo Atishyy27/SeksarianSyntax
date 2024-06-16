@@ -29,6 +29,8 @@ const Navbar = (props: Props) => {
             style={{
               color: selected === "dashboard" ? "inherit" : palette.grey[100],
               textDecoration: "inherit",
+              fontWeight:700,
+              fontSize: "16px"
             }}
           >
             Dashboard
@@ -43,6 +45,8 @@ const Navbar = (props: Props) => {
             style={{
               color: selected === "predictions" ? "inherit" : palette.primary[700],
               textDecoration: "inherit",
+               fontWeight:700,
+              fontSize: "16px"
             }}
           >
             Algorithms
