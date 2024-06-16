@@ -104,8 +104,9 @@ const Row2 = () => {
               yAxisId="right"
               orientation="right"
               tickLine={false}
-              axisLine={false}
-              style={{ fontSize: "10px" ,}}
+              axisLine={{ strokeWidth: "0" }}
+              style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <Tooltip
               contentStyle={{
