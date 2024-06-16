@@ -3,7 +3,7 @@ import DashboardBox from "@/components/DashboardBox";
 import FlexBetween from "@/components/FlexBetween";
 import { useGetKpisQuery, useGetProductsQuery } from "@/state/api";
 import { Box, Typography, useTheme } from "@mui/material";
-import React, { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import {
   Tooltip,
   CartesianGrid,
@@ -30,6 +30,9 @@ const Row2 = () => {
   const pieColors = [palette.secondary[300], palette.secondary[700]];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
+  useEffect(() =>{
+    console.log('productData',productData)
+  },[productData])
 
   const operationalExpenses = useMemo(() => {
     return (
@@ -46,19 +49,27 @@ const Row2 = () => {
     );
   }, [operationalData]);
 
-  const productExpenseData = useMemo(() => {
-    return (
-      productData &&
-      productData.map(({ _id, price, expense }) => {
-        return {
-          id: _id,
-          price: price,
-          expense: expense,
-        };
-      })
-    );
-  }, [productData]);
 
+
+  // Use useMemo to memoize the transformation of productData
+  const productExpenseData = useMemo(() => {
+    // Check if productData is valid
+    if (!productData || !Array.isArray(productData)) {
+      console.error("Invalid productData structure:", productData);
+      return []; // Return an empty array if productData is invalid
+    }
+
+    // Transform the productData
+    const transformedData = productData.map(({ _id, price, expense }) => ({
+      id: _id,
+      price: price,
+      expense: expense,
+    }));
+
+    // Log the transformed data for debugging
+    console.log('Transformed Product Data:', transformedData);
+    return transformedData;
+  }, [productData]);  
   return (
     <>
       <DashboardBox gridArea="d" bgcolor={"#243256"}>
