@@ -61,11 +61,6 @@ const Row3 = () => {
 
   const transactionColumns = [
     {
-      field: "_id",
-      headerName: "TransactionID",
-      flex: 1,
-    },
-    {
       field: "buyer",
       headerName: "To Whom",
       flex: 0.67,
@@ -82,6 +77,11 @@ const Row3 = () => {
       flex: 0.1,
       renderCell: (params: GridCellParams) =>
         (params.value as Array<string>).length,
+    },
+    {
+      field: "_id",
+      headerName: "TransactionID",
+      flex: 1,
     },
   ];
 
