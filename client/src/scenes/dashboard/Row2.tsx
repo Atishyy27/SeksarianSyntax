@@ -30,9 +30,9 @@ const Row2 = () => {
   const pieColors = [palette.secondary[300], palette.secondary[700]];
   const { data: operationalData } = useGetKpisQuery();
   const { data: productData } = useGetProductsQuery();
-  useEffect(() =>{
-    console.log('productData',productData)
-  },[productData])
+  useEffect(() => {
+    console.log("productData", productData);
+  }, [productData]);
 
   const operationalExpenses = useMemo(() => {
     return (
@@ -48,8 +48,6 @@ const Row2 = () => {
       )
     );
   }, [operationalData]);
-
-
 
   // Use useMemo to memoize the transformation of productData
   const productExpenseData = useMemo(() => {
@@ -67,20 +65,15 @@ const Row2 = () => {
     }));
 
     // Log the transformed data for debugging
-    console.log('Transformed Product Data:', transformedData);
+    console.log("Transformed Product Data:", transformedData);
     return transformedData;
-  }, [productData]);  
+  }, [productData]);
   return (
     <>
-
       //d
       <DashboardBox gridArea="d" bgcolor={"#243256"}>
-        <BoxHeader
-          title="Investments vs expenditure"
-          sideText="+3.4%"
-        />
+        <BoxHeader title="Investments vs expenditure" sideText="+3.4%" />
         <ResponsiveContainer width="100%" height="100%">
-
           <LineChart
             data={operationalExpenses}
             margin={{
@@ -94,23 +87,33 @@ const Row2 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
               yAxisId="left"
               orientation="left"
               tickLine={false}
-              axisLine={false}
+              // axisLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
               axisLine={false}
-              style={{ fontSize: "10px" }}
+              style={{ fontSize: "10px" ,}}
             />
-            <Tooltip />
+            <Tooltip
+              contentStyle={{
+                backgroundColor: "#000",
+                color: "#fff",
+                border: "none",
+              }}
+            />
             <Line
               yAxisId="left"
               type="monotone"
@@ -124,11 +127,8 @@ const Row2 = () => {
               stroke={palette.primary.main}
             />
           </LineChart>
-
-
         </ResponsiveContainer>
       </DashboardBox>
-
       //e
       <DashboardBox gridArea="e" bgcolor={"#243256"}>
         <BoxHeader title="Portfolio Breakdown" sideText="+4%" />
@@ -177,7 +177,6 @@ const Row2 = () => {
           </Box>
         </FlexBetween>
       </DashboardBox>
-
       //f
       <DashboardBox gridArea="f" bgcolor={"#243256"}>
         <BoxHeader title="Cash Flow Analysis" sideText="+4%" />
@@ -195,22 +194,33 @@ const Row2 = () => {
               type="number"
               dataKey="price"
               name="price"
-              axisLine={false}
+              // axisLine={false}
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
               tickFormatter={(v) => `$${v}`}
             />
             <YAxis
               type="number"
               dataKey="expense"
               name="expense"
-              axisLine={false}
+              // axisLine={false}
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
               tickFormatter={(v) => `$${v}`}
             />
             <ZAxis type="number" range={[20]} />
-            <Tooltip formatter={(v) => `$${v}`} />
+            <Tooltip
+              formatter={(v) => `$${v}`}
+              contentStyle={{
+                backgroundColor: "#fff",
+                color: "#fff",
+                border: "#fff",
+              }}
+            />
             <Scatter
               name="Product Expense Ratio"
               data={productExpenseData}

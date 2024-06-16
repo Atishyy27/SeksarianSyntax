@@ -15,14 +15,14 @@ const Navbar = (props: Props) => {
       {/* LEFT SIDE */}
       <FlexBetween gap="0.70rem"  >
         <PixIcon sx={{ fontSize: "25px" }} />
-        <Typography variant="h3" fontSize="20px">
+        <Typography variant="h3" fontSize="25px">
           FinGuard
         </Typography>
       </FlexBetween>
 
       {/* RIGHT SIDE */}
       <FlexBetween gap="2rem" p="0.5rem 0rem 0.7rem">
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
+        <Box sx={{ "&:hover": { color: palette.primary[100], fontWeight:400 } }}>
           <Link
             to="/"
             onClick={() => setSelected("dashboard")}
@@ -35,25 +35,13 @@ const Navbar = (props: Props) => {
           </Link>
         </Box>
 
-        <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
-          <Link
-            to="/Budgeting Tools"
-            onClick={() => setSelected("Budgeting Tools")}
-            style={{
-              color: selected === "Budgeting Tools" ? "inherit" : palette.grey[700],
-              textDecoration: "inherit",
-            }}
-          >
-           Budgeting Tools
-          </Link>
-        </Box>
 
         <Box sx={{ "&:hover": { color: palette.primary[100] } }}>
           <Link
             to="/predictions"
             onClick={() => setSelected("predictions")}
             style={{
-              color: selected === "predictions" ? "inherit" : palette.grey[700],
+              color: selected === "predictions" ? "inherit" : palette.primary[700],
               textDecoration: "inherit",
             }}
           >

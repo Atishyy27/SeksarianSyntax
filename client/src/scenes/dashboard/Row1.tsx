@@ -102,7 +102,7 @@ const Row1 = () => {
               <linearGradient id="colorExpenses" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="35%"
-                  stopColor={palette.secondary[300]}
+                  stopColor={palette.secondary[500]}
                   stopOpacity={0.3}
                 />
                 <stop
@@ -116,14 +116,18 @@ const Row1 = () => {
               dataKey="name"
               tickLine={false}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
               tickLine={false}
               axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
               domain={[8000, 23000]}
+              stroke={palette.secondary[300]}
             />
-            <Tooltip />
+            <Tooltip
+  contentStyle={{ backgroundColor: '#000', color: '#fff', border: 'none' }}
+/>
             <Area
               type="monotone"
               dataKey="revenue"
@@ -136,11 +140,13 @@ const Row1 = () => {
               type="monotone"
               dataKey="expenses"
               dot={true}
-              stroke={palette.primary.main}
+              stroke={palette.secondary[500]}
+              stopColor={palette.secondary[500]}
               fillOpacity={1}
               fill="url(#colorExpenses)"
             />
           </AreaChart>
+          
         </ResponsiveContainer>
       </DashboardBox>
 
@@ -166,22 +172,32 @@ const Row1 = () => {
             <XAxis
               dataKey="name"
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
               yAxisId="left"
               tickLine={false}
-              axisLine={false}
+              // axisLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
               yAxisId="right"
               orientation="right"
               tickLine={false}
-              axisLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
-            <Tooltip />
+
+
+
+            <Tooltip
+  contentStyle={{ backgroundColor: '#000', color: '#fff', border: 'none' }}
+/>
             <Legend
               height={20}
               wrapperStyle={{
@@ -226,12 +242,12 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[900]}
+                  stopColor={palette.primary[300]}
                   stopOpacity={0.9}
                 />
                 <stop
                   offset="95%"
-                  stopColor={palette.primary[300]}
+                  stopColor={palette.secondary[300]}
                   stopOpacity={0}
                 />
               </linearGradient>
@@ -242,16 +258,22 @@ const Row1 = () => {
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
             <XAxis
               dataKey="name"
-              axisLine={false}
+              // axisLine={false}
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
             <YAxis
-              axisLine={false}
+              // axisLine={false}
               tickLine={false}
+              axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
+              stroke={palette.secondary[300]}
             />
-            <Tooltip />
+            <Tooltip
+  contentStyle={{ backgroundColor: '#000', color: '#fff', border: 'none' }}
+/>
             <Bar dataKey="revenue" fill="url(#colorRevenue)" />
           </BarChart>
         </ResponsiveContainer>
