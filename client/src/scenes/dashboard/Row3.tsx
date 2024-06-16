@@ -62,12 +62,12 @@ const Row3 = () => {
   const transactionColumns = [
     {
       field: "_id",
-      headerName: "id",
+      headerName: "TransactionID",
       flex: 1,
     },
     {
       field: "buyer",
-      headerName: "Buyer",
+      headerName: "To Whom",
       flex: 0.67,
     },
     {
@@ -78,7 +78,7 @@ const Row3 = () => {
     },
     {
       field: "productIds",
-      headerName: "Count",
+      headerName: "Current",
       flex: 0.1,
       renderCell: (params: GridCellParams) =>
         (params.value as Array<string>).length,
@@ -121,10 +121,11 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
+
       <DashboardBox gridArea="h" bgcolor={"#243256"}>
         <BoxHeader
-          title=" Financial Goals Progress"
-          sideText={`${transactionData?.length} Long term Financial objectives`}
+          title=" Transactions History"
+          sideText={`${transactionData?.length}: Long term Financial Statements`}
         />
         <Box
           mt="1rem"
@@ -155,6 +156,7 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
+
       <DashboardBox gridArea="i" bgcolor={"#243256"}>
         <BoxHeader title="Budgeting Tools" sideText="+4%" />
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
@@ -179,6 +181,7 @@ const Row3 = () => {
           ))}
         </FlexBetween>
       </DashboardBox>
+
       <DashboardBox gridArea="j" bgcolor={"#243256"}>
         <BoxHeader
           title="Overall Summary and Explanation Data"

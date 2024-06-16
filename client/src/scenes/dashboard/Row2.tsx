@@ -72,18 +72,21 @@ const Row2 = () => {
   }, [productData]);  
   return (
     <>
+
+      //d
       <DashboardBox gridArea="d" bgcolor={"#243256"}>
         <BoxHeader
           title="Investments vs expenditure"
-          sideText="+4%"
+          sideText="+3.4%"
         />
         <ResponsiveContainer width="100%" height="100%">
+
           <LineChart
             data={operationalExpenses}
             margin={{
               top: 20,
               right: 0,
-              left: -10,
+              left: 10,
               bottom: 55,
             }}
           >
@@ -121,11 +124,15 @@ const Row2 = () => {
               stroke={palette.primary.main}
             />
           </LineChart>
+
+
         </ResponsiveContainer>
       </DashboardBox>
+
+      //e
       <DashboardBox gridArea="e" bgcolor={"#243256"}>
         <BoxHeader title="Portfolio Breakdown" sideText="+4%" />
-        <FlexBetween mt="0.25rem" gap="1.5rem" pr="1rem">
+        <FlexBetween mt="0.15rem" gap="1.5rem" pr="1rem" pb="5rem">
           <PieChart
             width={130}
             height={100}
@@ -170,6 +177,8 @@ const Row2 = () => {
           </Box>
         </FlexBetween>
       </DashboardBox>
+
+      //f
       <DashboardBox gridArea="f" bgcolor={"#243256"}>
         <BoxHeader title="Cash Flow Analysis" sideText="+4%" />
         <ResponsiveContainer width="100%" height="100%">
