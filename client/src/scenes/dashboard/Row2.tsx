@@ -22,7 +22,8 @@ import {
 
 const pieData = [
   { name: "Group A", value: 200 },
-  { name: "Group B", value: 800 },
+  { name: "Group B", value: 500 },
+  {name: "Group C ", value: 300}
 ];
 
 const Row2 = () => {
