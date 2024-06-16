@@ -67,13 +67,14 @@ const Row1 = () => {
 
   return (
     <>
+       //a 
       <DashboardBox gridArea="a" bgcolor={"#243256"} color={"white"}>
         <BoxHeader
           title="Income vs Expenses"
-          subtitle="top line represents income bottom line represents expenses"
-          sideText="+4%"
+          subtitle="Top line represents income bottom line represents expenses"
+          sideText="+7.6%"
         />
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="95%">
           <AreaChart
             width={500}
             height={400}
@@ -81,7 +82,7 @@ const Row1 = () => {
             margin={{
               top: 15,
               right: 25,
-              left: -10,
+              left:0,
               bottom: 60,
             }}
           >
@@ -89,25 +90,25 @@ const Row1 = () => {
               <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[100]}
+                  stopColor={palette.primary[300]}
                   stopOpacity={0.6}
                 />
                 <stop
                   offset="95%"
-                  stopColor={palette.primary[100]}
+                  stopColor={palette.primary[300]}
                   stopOpacity={0}
                 />
               </linearGradient>
               <linearGradient id="colorExpenses" x1="0" y1="0" x2="0" y2="1">
                 <stop
                   offset="5%"
-                  stopColor={palette.primary[300]}
+                  stopColor={palette.secondary[900]}
                   stopOpacity={0.5}
                 />
                 <stop
                   offset="95%"
-                  stopColor={palette.primary[300]}
-                  stopOpacity={0}
+                  stopColor={palette.secondary[900]}
+                  stopOpacity={0.5}
                 />
               </linearGradient>
             </defs>
@@ -142,10 +143,12 @@ const Row1 = () => {
           </AreaChart>
         </ResponsiveContainer>
       </DashboardBox>
+
+      //b
       <DashboardBox gridArea="b" bgcolor={"#243256"}>
         <BoxHeader
-          title="Budgets vs Actual"
-          subtitle="top line represents Budgets, bottom line represents Actual"
+          title="Budgets vs Actual expences"
+          subtitle="Top line represents Budgets, bottom line represents Actual expenses"
           sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
@@ -156,8 +159,8 @@ const Row1 = () => {
             margin={{
               top: 20,
               right: 0,
-              left: -10,
-              bottom: 55,
+              left: 0,
+              bottom: 60,
             }}
           >
             <CartesianGrid vertical={false} stroke={palette.grey[800]} />
@@ -190,24 +193,26 @@ const Row1 = () => {
               yAxisId="left"
               type="monotone"
               dataKey="budget"
-              stroke={palette.tertiary[500]}
+              stroke={palette.primary.main}
             />
             <Line
               yAxisId="right"
               type="monotone"
               dataKey="actual"
-              stroke={palette.primary.main}
+              stroke={palette.secondary[500]}
             />
           </LineChart>
         </ResponsiveContainer>
       </DashboardBox>
+
+      //c
       <DashboardBox gridArea="c" bgcolor={"#243256"}>
         <BoxHeader
-          title="Transaction History"
-          subtitle="graph representing transaction history within 2 day to 6 months"
-          sideText="+4%"
+          title="Total Income"
+          subtitle="graph representing Income history within 2 day to 6 months"
+          sideText="+6%"
         />
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="90%">
           <BarChart
             width={500}
             height={300}
