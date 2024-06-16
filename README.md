@@ -42,6 +42,8 @@ Hoping to aid the hustle of a common man, we present to you, the feature-rich Fi
 ```
 ## Technologies Involved
 
+![frontend](https://private-user-images.githubusercontent.com/142108881/340063437-1249df2c-a605-48b4-a140-c8b0b4656b27.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTg1MTU5NzEsIm5iZiI6MTcxODUxNTY3MSwicGF0aCI6Ii8xNDIxMDg4ODEvMzQwMDYzNDM3LTEyNDlkZjJjLWE2MDUtNDhiNC1hMTQwLWM4YjBiNDY1NmIyNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNjE2JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDYxNlQwNTI3NTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04NzIxZTA1Y2RiYWUxMWYxMDllYmUzM2IzNDMxYWIyYTgyNmJmYjMzOWI3OTNiMTM4ZGRjZmE2MTgwYTJmMjQxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Eiso-6mgUrayutnhDFLw6eHXBuKvINPtm8W2te2hFhs)
+
 ### Front End
 
 * **[Tailwind CSS](https://tailwindcss.com/docs/installation):** Tailwind CSS is an open-source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables.
@@ -56,4 +58,7 @@ Hoping to aid the hustle of a common man, we present to you, the feature-rich Fi
 * **[Node.JS](https://nodejs.org/docs/latest/api/):** Lets developers use JavaScript to write command line tools and for server-side scripting.
 * **[ReCharts](https://recharts.org/en-US/guide):** React library that helps you write charts in React
 * **[Regression-JS](https://tom-alexander.github.io/regression-js/):**  It is a JavaScript module containing a collection of linear least-squares fitting methods for simple data analysis.
+
+![regression js graph](https://curiousily.com/static/15f3fb3ed7b8357723d2bd6febadcec8/a27c6/linear-model.png)
+
 * **[TypeScript](https://www.typescriptlang.org/docs/):** TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.
