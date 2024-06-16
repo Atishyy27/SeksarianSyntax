@@ -72,7 +72,7 @@ const Row2 = () => {
     <>
       //d
       <DashboardBox gridArea="d" bgcolor={"#243256"}>
-        <BoxHeader title="Investments vs expenditure" sideText="+3.4%" />
+        <BoxHeader title="Investments vs expenditure"  />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={operationalExpenses}
@@ -132,7 +132,7 @@ const Row2 = () => {
       </DashboardBox>
       //e
       <DashboardBox gridArea="e" bgcolor={"#243256"}>
-        <BoxHeader title="Portfolio Breakdown" sideText="+4%" />
+        <BoxHeader title="Portfolio Breakdown" />
         <FlexBetween mt="0.15rem" gap="1.5rem" pr="1rem" pb="5rem">
           <PieChart
             width={130}
@@ -180,7 +180,7 @@ const Row2 = () => {
       </DashboardBox>
       //f
       <DashboardBox gridArea="f" bgcolor={"#243256"}>
-        <BoxHeader title="Cash Flow Analysis" sideText="+4%" />
+        <BoxHeader title="Cash Flow Analysis In Rupees"  />
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart
             margin={{
@@ -200,7 +200,7 @@ const Row2 = () => {
               axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
               stroke={palette.secondary[300]}
-              tickFormatter={(v) => `$${v}`}
+              tickFormatter={(v) => `${v}`}
             />
             <YAxis
               type="number"
@@ -211,7 +211,7 @@ const Row2 = () => {
               axisLine={{ strokeWidth: "0" }}
               style={{ fontSize: "13px" }}
               stroke={palette.secondary[300]}
-              tickFormatter={(v) => `$${v}`}
+              tickFormatter={(v) => `${v}`}
             />
             <ZAxis type="number" range={[20]} />
             <Tooltip
