@@ -72,7 +72,7 @@ const Row1 = () => {
         <BoxHeader
           title="Income vs Expenses"
           subtitle="Top line represents income bottom line represents expenses"
-          sideText="+7.6%"
+          // sideText="+7.6%"
         />
         <ResponsiveContainer width="100%" height="95%">
           <AreaChart
@@ -152,9 +152,9 @@ const Row1 = () => {
 
       <DashboardBox gridArea="b" bgcolor={"#243256"}>
         <BoxHeader
-          title="Budgets vs Actual expences"
+          title="Budgets vs Actual expenses"
           subtitle="Top line represents Budgets, bottom line represents Actual expenses"
-          sideText="+4%"
+          // sideText="+4%"
         />
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
@@ -224,7 +224,7 @@ const Row1 = () => {
         <BoxHeader
           title="Total Income"
           subtitle="Graph representing Income history within 2 day to 6 months"
-          sideText="+6%"
+          // sideText="+6%"
         />
         <ResponsiveContainer width="100%" height="90%">
           <BarChart
