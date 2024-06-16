@@ -13,18 +13,47 @@ Hoping to aid the hustle of a common man, we present to you, the feature-rich Fi
 5. **Predictions on Financial Trends**: to gain an upper edge insight into your financial life, we employ machine learning to predict data based on past entries. This feature is especially useful for business individuals.
 6. **Credible Technology**: all the technologies and frameworks used in FinGuard are reputed and credible. You find a complete list of tech stacks for our work in a later section of this documentation.
 
+## How it works?
+
+1. Your financial data is pulled from your account statement
+2. Data is processed in our server
+3. Comprehensive graphical and analytical output is present on our dashboard 
+
 ## Installation Procedure
 1. Clone the repository onto your workspace
-`git clone https://github.com/Atishyy27/SeksarianSyntax/`
+```git clone https://github.com/Atishyy27/SeksarianSyntax/```
 2. Install Node Package Manager
-`npm install -g npm`
+```npm install -g npm```
 3. Navigate to the client (frontend) directory and install npm
-`cd client`
-`npm i`
+```
+    cd client
+    npm i
+```
 4. Navigate to the server (backend) directory and install npm
-`cd server`
-`npm i`
+```
+    cd server
+    npm i
+```
 5. Initialize database using MongoDB Compass
 6. Run the web application from client directory
-`cd client`
-`npm run dev`
+```
+    cd client
+    npm run dev
+```
+## Technologies Involved
+
+### Front End
+
+* **[Tailwind CSS](https://tailwindcss.com/docs/installation):** Tailwind CSS is an open-source CSS framework. The main feature of this library is that, unlike other CSS frameworks like Bootstrap, it does not provide a series of predefined classes for elements such as buttons or tables.
+* **[Materials UI](https://mui.com/material-ui/getting-started/):** Used to implement grid based layout and responsive animations.
+* **[React.JS](https://legacy.reactjs.org/docs/getting-started.html):** React is a free and open-source front-end JavaScript library for building user interfaces based on components.
+* **[NEXT.JS](https://nextjs.org/docs):** Used to create web applications with server side rendering and static website generation.
+* **[Redux](https://redux.js.org/usage/):** Redux is an open-source JavaScript library for managing and centralizing application state.
+
+### Back End
+
+* **[MongoDB](https://www.mongodb.com/docs/):** A non-SQL database, utilizes JSON-like documents with optional schemas.
+* **[Node.JS](https://nodejs.org/docs/latest/api/):** Lets developers use JavaScript to write command line tools and for server-side scripting.
+* **[ReCharts](https://recharts.org/en-US/guide):** React library that helps you write charts in React
+* **[Regression-JS](https://tom-alexander.github.io/regression-js/):**  It is a JavaScript module containing a collection of linear least-squares fitting methods for simple data analysis.
+* **[TypeScript](https://www.typescriptlang.org/docs/):** TypeScript is a free and open-source high-level programming language developed by Microsoft that adds static typing with optional type annotations to JavaScript.
