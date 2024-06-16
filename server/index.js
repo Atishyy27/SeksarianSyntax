@@ -36,8 +36,8 @@ mongoose
 .then(async()=>{
     app.listen(PORT,()=> console.log(`server port: ${PORT}`))
     
-//     await mongoose.connection.db.dropDatabase();
-// KPI.insertMany(kpis)
+    await mongoose.connection.db.dropDatabase();
+KPI.insertMany(kpis)
 
 })
 
